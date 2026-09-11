@@ -1,1 +1,1 @@
-# AI-Powered-Adaptive-Auto-Scroll-for-YouTube-Shorts-Instagram-Reels
+# Ai-Adaptive-Autoscroll
