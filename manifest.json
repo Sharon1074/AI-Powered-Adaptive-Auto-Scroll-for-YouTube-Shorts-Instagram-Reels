@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI Auto-Scroll: Shorts & Reels",
+  "version": "2.0.0",
+  "description": "Automatically advances YouTube Shorts and Instagram Reels using an on-device MobileNet AI model that classifies content and learns your real preferences per category.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://www.instagram.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["tf.min.js", "mobilenet.min.js", "ai-engine.js", "common.js", "content-youtube.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["tf.min.js", "mobilenet.min.js", "ai-engine.js", "common.js", "content-instagram.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Auto-Scroll"
+  }
+}
